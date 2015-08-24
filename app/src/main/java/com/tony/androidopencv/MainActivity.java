@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
     public void onResume()
     {
         super.onResume();
-        OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_6, this, mLoaderCallback);
+        OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_0_0, this, mLoaderCallback);
     }
 
     @Override
@@ -76,12 +76,12 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
 
     @Override
     public void onCameraViewStarted(int width, int height) {
-
+        Log.i(TAG,"onCameraViewStarted");
     }
 
     @Override
     public void onCameraViewStopped() {
-
+        Log.i(TAG,"onCameraViewStopped");
     }
 
     @Override
